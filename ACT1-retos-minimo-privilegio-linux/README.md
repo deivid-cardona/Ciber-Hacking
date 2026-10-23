@@ -24,7 +24,7 @@ Limpieza al terminar:
 sudo bash retos.sh limpiar
 ```
 
-Los apartados siguientes describen el procedimiento y lo que se espera comprobar. La ejecución y sus resultados quedarán acreditados con las capturas reales de Kali, pendientes de incorporar. Todas las imágenes se guardan directamente en `evidencias/`.
+Los apartados siguientes describen el procedimiento y lo que se espera comprobar. Las capturas de cada reto se guardan directamente en `evidencias/`.
 
 ## Reto 1 — Permisos de ficheros
 
@@ -36,7 +36,7 @@ La comprobación debe mostrar que `becario` ya no puede leer ni escribir y que `
 
 Lección de seguridad: los permisos deben responder a una necesidad de trabajo, no concederse a todos para evitar problemas de acceso.
 
-![Evidencia del reto 1 — pendiente de incorporar](evidencias/reto-1-permisos-ficheros.png)
+![Reto 1 — prueba del ataque](evidencias/reto1_ataque.png)
 
 ## Reto 2 — Grupo sudo
 
@@ -48,7 +48,9 @@ La verificación debe realizarse también desde una sesión nueva de `becario`, 
 
 Lección de seguridad: los grupos administrativos se asignan solo a quien los necesita y su retirada debe acompañarse de la revisión de sesiones existentes.
 
-![Evidencia del reto 2 — pendiente de incorporar](evidencias/reto-2-grupo-sudo.png)
+![Reto 2 — prueba del ataque](evidencias/reto2_ataque.png)
+
+![Reto 2 — corrección](evidencias/reto2_arreglo.png)
 
 ## Reto 3 — Reglas sudoers
 
@@ -60,7 +62,9 @@ La comprobación debe mostrar que ya no se permite ejecutar `find` directamente 
 
 Lección de seguridad: limitar sudo a un programa no es suficiente cuando ese programa permite ejecutar otras acciones con privilegios.
 
-![Evidencia del reto 3 — pendiente de incorporar](evidencias/reto-3-sudoers.png)
+![Reto 3 — prueba del ataque](evidencias/reto3_ataque.png)
+
+![Reto 3 — desarrollo y corrección](evidencias/reto3_completo.png)
 
 ## Reto 4 — Bit SUID
 
@@ -72,7 +76,7 @@ La verificación debe mostrar que el bit SUID ha desaparecido, que la herramient
 
 Lección de seguridad: un ejecutable con privilegios especiales debe tener una justificación concreta y un alcance estrictamente limitado.
 
-![Evidencia del reto 4 — pendiente de incorporar](evidencias/reto-4-suid.png)
+![Reto 4 — desarrollo y corrección](evidencias/reto4_completo.png)
 
 ## Reto 5 — Capabilities
 
@@ -84,7 +88,7 @@ La comprobación debe mostrar que `getcap` ya no devuelve la capability para esa
 
 Lección de seguridad: una sola capability puede conceder mucho más poder del que necesita una herramienta.
 
-![Evidencia del reto 5 — pendiente de incorporar](evidencias/reto-5-capabilities.png)
+![Reto 5 — desarrollo y corrección](evidencias/reto5_completo.png)
 
 ## Reto 6 — Tareas programadas con cron
 
@@ -96,7 +100,7 @@ La validación debe demostrar que `becario` no puede editar ni sustituir el scri
 
 Lección de seguridad: la integridad de una tarea privilegiada depende del script y de todos los directorios que permiten acceder a él o sustituirlo.
 
-![Evidencia del reto 6 — pendiente de incorporar](evidencias/reto-6-cron.png)
+![Reto 6 — desarrollo y corrección](evidencias/reto6_completo.png)
 
 ## Reto 7 — Servicio web
 
@@ -108,4 +112,8 @@ La comprobación debe mostrar que el proceso ya no pertenece a root, que el acce
 
 Lección de seguridad: un servicio debe disponer de los mínimos privilegios y publicar únicamente los recursos que necesita servir.
 
-![Evidencia del reto 7 — pendiente de incorporar](evidencias/reto-7-servicio-web.png)
+![Reto 7 — desarrollo y corrección](evidencias/reto7_completo.png)
+
+## Resumen de la práctica
+
+![Resumen final de los retos](evidencias/resumen_final.png)
