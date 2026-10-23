@@ -1,64 +1,67 @@
 # Actividad — Retos de mínimo privilegio en Linux
 
-> Práctica de Ciber Hacking para aprender a identificar, corregir y verificar configuraciones inseguras en un laboratorio Linux.
+Práctica de **Ciber Hacking** en Kali Linux sobre el principio de mínimo privilegio. En cada reto se observa una configuración insegura, se corrige y se comprueba que el uso legítimo sigue funcionando.
 
-## Descripción
+## Laboratorio
 
-En esta actividad individual trabajarás con siete retos preparados mediante el script `retos.sh`, en una máquina virtual de Kali Linux. En cada reto analizarás una configuración insegura, reproducirás su efecto en el entorno controlado y aplicarás una corrección basada en el principio de mínimo privilegio.
+Realiza la práctica únicamente en la máquina virtual aislada de Kali. Crea un snapshot antes de empezar. El script `retos.sh` se añadirá a `archivos/` una vez revisado.
 
-El objetivo es demostrar que comprendes qué estaba mal configurado, qué medidas permiten corregirlo y cómo comprobar que la solución es efectiva sin impedir el funcionamiento legítimo del sistema.
-
-## Objetivos
-
-- Identificar configuraciones inseguras relacionadas con usuarios, permisos, servicios y tareas programadas.
-- Observar sus consecuencias dentro del laboratorio.
-- Aplicar correcciones con privilegios de administración.
-- Verificar que la configuración corregida bloquea el acceso no autorizado.
-- Comprobar que las funciones legítimas siguen operativas.
-- Documentar el procedimiento con comandos, resultados y capturas propias.
-
-## Retos de la actividad
-
-| Reto | Tema |
-|---:|---|
-| 1 | Permisos de ficheros |
-| 2 | Pertenencia al grupo `sudo` |
-| 3 | Reglas de `sudoers` y permisos sobre programas |
-| 4 | Bit SUID |
-| 5 | Capabilities de Linux |
-| 6 | Tareas programadas con `cron` |
-| 7 | Usuario y directorio de un servicio web |
-
-## Entorno de trabajo
-
-- Máquina virtual de Kali Linux.
-- Permisos de administración mediante `sudo`.
-- Script `retos.sh`, pendiente de incorporación al repositorio.
-- Usuario de laboratorio `becario`, creado por el script.
-- Entorno virtualizado y aislado.
-
-> Realiza las pruebas únicamente en la máquina virtual del laboratorio. Crea un snapshot antes de comenzar.
-
-## Preparación y ciclo de trabajo
-
-Prepara el reto que vayas a realizar, sustituyendo `N` por su número:
+Prepara un reto sustituyendo `N` por su número del 1 al 7:
 
 ```bash
 sudo bash retos.sh preparar N
 ```
 
-Comprueba el reto después de aplicar la corrección:
+Al terminar la corrección, ejecuta la comprobación del reto:
 
 ```bash
 sudo bash retos.sh comprobar N
 ```
 
-Al terminar el laboratorio:
+Para limpiar el laboratorio al acabar:
 
 ```bash
 sudo bash retos.sh limpiar
 ```
 
-## 1. Permisos de ficheros
+## Reto 1 — Permisos de ficheros
 
-Apartado pendiente de completar con los comandos ejecutados, la explicación de la corrección y la captura real de Kali, que se mostrará aquí mismo. Las imágenes se guardarán directamente en una única carpeta `evidencias/`, sin subcarpetas por reto.
+**Tema:** permisos demasiado abiertos sobre las nóminas. Documentación del reto y evidencia de Kali:
+
+![Evidencia del reto 1](evidencias/reto-1-permisos-ficheros.png)
+
+## Reto 2 — Grupo sudo
+
+**Tema:** pertenencia innecesaria de un usuario al grupo administrativo. Documentación y evidencia:
+
+![Evidencia del reto 2](evidencias/reto-2-grupo-sudo.png)
+
+## Reto 3 — Reglas sudoers
+
+**Tema:** autorización excesiva para ejecutar un programa con privilegios. Documentación y evidencia:
+
+![Evidencia del reto 3](evidencias/reto-3-sudoers.png)
+
+## Reto 4 — Bit SUID
+
+**Tema:** ejecutable de prueba con SUID de root. Documentación y evidencia:
+
+![Evidencia del reto 4](evidencias/reto-4-suid.png)
+
+## Reto 5 — Capabilities
+
+**Tema:** capability que concede privilegios innecesarios a un ejecutable. Documentación y evidencia:
+
+![Evidencia del reto 5](evidencias/reto-5-capabilities.png)
+
+## Reto 6 — Tareas programadas con cron
+
+**Tema:** script ejecutado por root que puede ser modificado por usuarios no autorizados. Documentación y evidencia:
+
+![Evidencia del reto 6](evidencias/reto-6-cron.png)
+
+## Reto 7 — Servicio web
+
+**Tema:** servicio ejecutado con privilegios excesivos y con un directorio publicado demasiado amplio. Documentación y evidencia:
+
+![Evidencia del reto 7](evidencias/reto-7-servicio-web.png)
