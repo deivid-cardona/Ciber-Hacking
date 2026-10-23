@@ -33,69 +33,32 @@ El objetivo es demostrar que comprendes qué estaba mal configurado, qué medida
 
 - Máquina virtual de Kali Linux.
 - Permisos de administración mediante `sudo`.
-- Script `retos.sh`, que se incorporará en la carpeta `archivos/` tras revisar su funcionamiento.
+- Script `retos.sh`, pendiente de incorporación al repositorio.
 - Usuario de laboratorio `becario`, creado por el script.
 - Entorno virtualizado y aislado.
 
-> **Importante:** realiza esta actividad únicamente en la máquina virtual preparada para el laboratorio. No ejecutes el script en un equipo de producción ni en sistemas ajenos. Antes de comenzar, crea un snapshot de la máquina virtual para poder restaurarla si fuera necesario.
+> Realiza las pruebas únicamente en la máquina virtual del laboratorio. Crea un snapshot antes de comenzar.
 
 ## Preparación y ciclo de trabajo
 
-Desde el directorio donde se encuentre `retos.sh`, prepara un reto con:
+Prepara el reto que vayas a realizar, sustituyendo `N` por su número:
 
 ```bash
 sudo bash retos.sh preparar N
 ```
 
-Sustituye `N` por el número del reto, del `1` al `7`. Sigue las indicaciones que muestra el script para observar la configuración inicial y realizar las pruebas como `becario`. Después, vuelve a la sesión administrativa para aplicar la corrección y verificar el resultado.
-
-Para comprobar un reto:
+Comprueba el reto después de aplicar la corrección:
 
 ```bash
 sudo bash retos.sh comprobar N
 ```
 
-Al terminar el laboratorio, puedes limpiar los elementos creados por el script con:
+Al terminar el laboratorio:
 
 ```bash
 sudo bash retos.sh limpiar
 ```
 
-El script también permite preparar todos los retos mediante `preparar todos` y comprobarlos conjuntamente mediante `comprobar todos`. Para aprender y documentar cada configuración por separado, se recomienda trabajar en orden y preparar un reto cada vez.
+## 1. Permisos de ficheros
 
-## Documentación de la práctica
-
-Documenta cada reto en el PDF de entrega. Para cada uno, incluye:
-
-- **Configuración inicial:** evidencia de la configuración insegura, obtenida con comandos de inspección adecuados.
-- **Prueba en el laboratorio:** evidencia de que el efecto de la mala configuración se reproduce como `becario`.
-- **Corrección aplicada:** comandos ejecutados como administrador y una breve explicación de su función.
-- **Verificación:** prueba de que el acceso no autorizado ya no funciona y de que el uso legítimo continúa operativo.
-- **Lección aprendida:** una frase que resuma el principio de seguridad observado en el reto.
-
-Las capturas deben mostrar claramente el prompt con el usuario y el nombre de la máquina, el comando ejecutado y su salida. Utiliza resultados obtenidos por ti durante la práctica; no sustituyas las evidencias por ejemplos o salidas copiadas.
-
-## Entrega
-
-Entrega un único documento PDF con los siete retos en orden. El documento debe incluir las evidencias, los comandos utilizados, la explicación de las correcciones y la lección aprendida en cada reto.
-
-No incluyas contraseñas personales, claves, datos reales ni información sensible en las capturas o en los archivos publicados.
-
-## Estructura del repositorio
-
-```text
-ACT1-retos-minimo-privilegio-linux/
-├── README.md
-├── archivos/
-└── evidencias/
-    └── README.md
-```
-
-La carpeta `evidencias/` se reserva para organizar las capturas de la práctica. El PDF final es el documento de entrega.
-
-## Recursos
-
-- [GTFOBins](https://gtfobins.github.io/) — referencia para estudiar riesgos asociados al uso inseguro de determinados binarios.
-- [Manual de sudoers](https://www.sudo.ws/docs/man/sudoers.man/)
-- [Linux capabilities(7)](https://man7.org/linux/man-pages/man7/capabilities.7.html)
-- [MITRE ATT&CK](https://attack.mitre.org/) — marco de referencia para técnicas relacionadas con escalada de privilegios y tareas programadas.
+Apartado pendiente de completar con los comandos ejecutados, la explicación de la corrección y la captura real de Kali, que se mostrará aquí mismo. Las imágenes se guardarán directamente en una única carpeta `evidencias/`, sin subcarpetas por reto.
