@@ -116,3 +116,7 @@ Realiza las pruebas únicamente en la VM aislada del laboratorio. Las capturas e
 ## Resumen
 
 ![Resumen final de la actividad](evidencias/resumen_final.png)
+
+---
+
+[← Volver al panel de actividades](https://github.com/deivid-cardona/Actividades-ASIXII/blob/main/README.md#actividades)
